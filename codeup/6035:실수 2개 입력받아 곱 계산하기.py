@@ -4,3 +4,9 @@
 a,b = input().split()
 m = float(a)*float(b)
 print(m)
+
+
+# 다른 사람 풀이 
+
+a,b = map(float,input().split())
+print(a*b)
