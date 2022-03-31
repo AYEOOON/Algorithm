@@ -12,3 +12,9 @@ print(a//b)
 #다른 풀이
 a, b = input().split()
 print(int(a)//int(b))
+
+
+# map을 사용한 다른 풀이
+
+a,b = map(int,input().split())
+print(a//b)
