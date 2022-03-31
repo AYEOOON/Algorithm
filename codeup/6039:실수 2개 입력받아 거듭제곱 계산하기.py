@@ -3,3 +3,9 @@
 f1,f2 = input().split()
 c = float(f1)**float(f2)
 print(c)
+
+
+# map을 사용한 다른풀이
+
+a,b = map(float,input().split())
+print(a**b)
