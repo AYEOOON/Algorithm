@@ -3,3 +3,9 @@
 a,b = input().split()
 c = int(a)**int(b)
 print(c)
+
+
+# map을 사용한 다른 풀이
+
+a,b = map(int,input().split())
+print(a**b)
