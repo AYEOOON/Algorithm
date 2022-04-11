@@ -3,3 +3,8 @@
 n=input()
 n=int(n)
 print(n)
+
+
+# 다른 풀이
+n=map(int,input().split())
+print(n)
