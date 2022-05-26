@@ -4,7 +4,7 @@
 
 num = int(input())
 a = list(map(int, input().split()))
-result = a[0]
+result = a[0]    # result에 0번째 값 잆력
 for i in a:
   if result > i: result = i
 print (result)
