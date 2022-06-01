@@ -28,8 +28,11 @@ for i in range(19):
 # 다른 풀이
     
 # 1. 초기 십자 바둑판 입력
-baduk = [[_for in range(19)]for _ in range(19)]
-
+baduk = []
+for _ in range(19):
+    matrix = list(map(int,input().split()))
+    baduk.append(matrix)
+    
 # 2. n과 좌표 값을 입력받고 그에 따라 십자 형태에 맞춰 흑->백, 백->흑으로 변환
 n = int(input())
 for _ in range(n):  # n번입력
@@ -40,4 +43,4 @@ for _ in range(n):  # n번입력
                
 # 3. 변환된 값을 한 줄 단위로 출력
 for b in baduk:
-    print(*baduk[i])           
+    print(*baduk)           
