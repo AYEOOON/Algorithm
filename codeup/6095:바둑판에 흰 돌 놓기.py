@@ -2,4 +2,13 @@
 # 2차원 리스트를 사용하는 문제이다.
 
 
-for..
+# 내 풀이
+d = [[0 for j in range(19)] for i in range(19)]
+
+n = int(input())
+for i in range(n):
+  x,y = map(int,input().split())
+  d[x-1][y-1]= 1            
+
+for crd in d:
+    print(*crd)
