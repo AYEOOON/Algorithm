@@ -8,3 +8,8 @@ T = int(input())       # T를 입력받음
 for i in range(T):
     A, B = map(int,input().split())
     print(A+B)
+
+    
+    
+# range안에서 단일로 숫자를 넣게 되면 해당 횟수만큼 for문이 돌게 된다. 
+# 자는 따로 사용하지 않으므로 _을 넣어주면 된다. 만약 for와 in 사이에 아무것도 넣지 않게 되면 오류가 나므로 유의해야 한다. 
