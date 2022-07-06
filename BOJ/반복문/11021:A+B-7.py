@@ -22,7 +22,7 @@ for i in range(n):
 # 다른사람 풀이(2)    
 import sys
 
-input = sys.stdin.readline   # input에 코드를 추가한다면, input이 sys.stdin.readline의 속도를 갖습니다.
+input = sys.stdin.readline   # input에 코드를 추가한다면, input이 sys.stdin.readline의 속도를 갖는다.
 
 for i in range(n):
   a, b = map(int, input())
