@@ -24,6 +24,7 @@ import sys
 
 input = sys.stdin.readline   # input에 코드를 추가한다면, input이 sys.stdin.readline의 속도를 갖는다.
 
+n = int(input())
 for i in range(n):
   a, b = map(int, input())
   print('Case #%d: %d'%(i+1, a + b))
