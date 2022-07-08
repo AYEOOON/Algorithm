@@ -19,3 +19,5 @@ input()
 for i,line in enumerate(sys.stdin.readlines()):    # enumerate()함수는 인덱스(index)와 원소를 동시에 접근하면서 루프를 돌릴 수 있는 함수이다.
     A,B=map(int,line.split())
     print(f"Case #{i+1}: {A} + {B} = {A+B}")
+
+# enumerate()함수에 대해 더 알아보기
