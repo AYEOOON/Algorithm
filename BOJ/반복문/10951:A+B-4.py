@@ -29,7 +29,7 @@ except:
 # 다른사람 풀이(2)(예외 처리 없이  sys.stdin.readlines() 를 사용하는 방법)
 import sys
 
-lines = sys.stdin.readlines()
+lines = sys.stdin.readlines()  # sys.stdin.readlines() 를 쓰게되면 여러번 문자열을 입력받아 저장하게 되는데 미리 저장되어있는 데이터로 반복문을 돌리기때문에 오류가 발생하지 않는다.
 
 for line in lines:
 	a,b = map(int,line.split())
