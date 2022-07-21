@@ -10,3 +10,9 @@ elif A == B:
     print('==')
 else:
     print('<')
+
+    
+# 다른사람 풀이
+
+a, b = map(int, input().split())
+print('>' if a > b else ('<' if a < b else '=='))
