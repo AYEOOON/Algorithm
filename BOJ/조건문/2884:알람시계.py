@@ -15,4 +15,6 @@ if M < 45 :	     # 분단위가 45분보다 작을 때
 print(H, M-45)
 
 
-#
+# 다른사람 풀이
+
+a,b=map(int,input().split());x=a*60+b-45;print(x//60%24,x%60)
