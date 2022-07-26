@@ -12,3 +12,6 @@ elif x < 0 and y < 0 :	# x,y: 음수
     print('3')
 else:
     print('4')
+
+    
+#
