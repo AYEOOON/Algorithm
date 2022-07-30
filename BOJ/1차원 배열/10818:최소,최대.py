@@ -7,4 +7,4 @@ numbers = list(map(int, input().split()))
 print(min(numbers),max(numbers))
 
 
-# 
+# 다른사람 풀이
