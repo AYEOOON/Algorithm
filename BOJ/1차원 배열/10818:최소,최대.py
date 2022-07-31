@@ -8,3 +8,7 @@ print(min(numbers),max(numbers))
 
 
 # 다른사람 풀이
+import sys
+input()
+a = [int(s) for s in sys.stdin.read().split()]
+print(min(a), max(a))
