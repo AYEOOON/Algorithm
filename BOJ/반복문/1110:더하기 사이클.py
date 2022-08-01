@@ -1,18 +1,25 @@
 # N이 주어졌을 때, N의 사이클의 길이를 구하는 프로그램을 작성하시오.
+# 첫째 줄에 N이 주어진다. N은 0보다 크거나 같고, 99보다 작거나 같은 정수이다.
+# 첫째 줄에 N의 사이클 길이를 출력한다.
 
 
-n = int(input())         # 68
-num = n
-cnt = 0                  # 사이클 수
+# 내 풀이
 
-while True:              # while 1이랑 동일
-    a = num / / 10       # 6
-    b = num % 10         # 8
-    c = (a + b) % 10     # 6 + 8 = 1"4"
-    num = (b * 10) + c   # 80 + 4 = 84
-
-    cnt = cnt + 1        # 사이클 수 + 1
-    if(num == n):        # num에서 입력된 n과 똑같은 숫자(68)가 나오면 멈춤
+N = int(input())  #입력받은 값을 int로 바꿈
+num = N           #변하는 값
+count = 0         #몇 번 사이클인지
+ 
+while True:
+    a = num//10
+    b = num %10
+    c = (a+b)%10
+    num = (b*10) + c
+    count += 1
+    if(num == N):
         break
+ 
+print(count)
 
-print(cnt)
+
+
+# 다른사람 풀이
