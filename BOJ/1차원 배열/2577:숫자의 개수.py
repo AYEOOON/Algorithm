@@ -11,7 +11,7 @@ c = int(input())
 x = list(str(a*b*c))
 
 for i in range(10):
-  print(x.count(str(i)))
+  print(x.count(str(i)))   # count(item) : 매칭되는 갯수를 리턴해줌
   
   
   
