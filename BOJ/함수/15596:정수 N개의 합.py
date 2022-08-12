@@ -7,3 +7,6 @@
 
 def solve(a):
     return sum(a)
+
+
+# 다른사람 풀이
