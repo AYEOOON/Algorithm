@@ -6,3 +6,8 @@
 
 word = input().split()
 print(len(word))
+
+
+# 다른풀이
+
+print(len(input().split()))
