@@ -12,8 +12,8 @@ for _ in range(C):
   result = 0            # 새로운 ox리스트를 입력 받으면 점수 합계를 리셋한다.
 
   for j in N:
-    if j == 'X':
-      count = 0
+    if j == 'X':        # 만약 for문 변수 j가 "x"를 만난다면 count를 0으로 초기화
+      count = 0         # 다시 그 다음 "O"를 만날 때 다시 1부터 count를 셀 수 있도록 함
       continue
 
     count += 1          # 'O'가 연속되면 점수가 1점씩 커진다.
