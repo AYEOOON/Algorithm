@@ -7,13 +7,14 @@
 
 n = int(input())                           # 과목수
 
-x = list(map(int,input().split()))
+x = list(map(int,input().split()))         # 과목 수 만큼 과목의 점수를 입력
 max_score = max(x)
 
 new_score = []
 for score in x:
-  new_score.append(score/max_score*100)    # 새로운 점수 생성
-test_avg = sum(new_score)/n
+  new_score.append(score/max_score*100)    # (입력받은 점수/최고 점수*100)식으로 새로운 점수를 구한 뒤 new_score[] 리스트에 저장한다.
+
+test_avg = sum(new_score)/n                # 새로운 점수들의 평균을 구하기 위해 값을 더한 뒤 과목 수로 나눔
 print(test_avg)
 
 
