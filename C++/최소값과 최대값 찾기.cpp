@@ -6,8 +6,7 @@ int main()
 { 
   // 변수 선언
   int size;
-  int smallest, largest;
-  int counter, number;
+  int smallest, largest, number;
   // 입력
   do
   {
@@ -27,7 +26,7 @@ int main()
     {
       smallest = number;
     }
-    else if (largest < number)
+    if (largest < number)
     {
       largest = number;
     }
