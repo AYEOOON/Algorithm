@@ -7,7 +7,7 @@ int main()
   // 변수 선언
   int base;
   int exponent;
-  int power, counter;
+  long int power, counter;
   // 입력
   do
   {
