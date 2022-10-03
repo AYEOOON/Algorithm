@@ -60,7 +60,7 @@ for i in range(n):   # 입력받은 n의 수만큼 숫자 입력
     nums.append(int(sys.stdin.readline()))   # nums 리스트에 넣기
 
 nums.sort()   # 리스트 정렬
-nums_s = Counter(nums).most_common()
+nums_s = Counter(nums).most_common()    # 중복된 데이터가 저장된 배열을 인자로 넘기면 각 원소가 몇 번씩 나오는지가 저장된 객체를 얻게됨
 print(round(sum(nums) / n))   # 산술평균
 print(nums[n // 2])     # 중앙값
 if len(nums_s) > 1:     # 최빈값
