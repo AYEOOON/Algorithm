@@ -18,7 +18,7 @@ for i in nums:    # 정렬된 리스트를 한개씩 출력시킨다. 옵션으�
 
 # 다른사람풀이
 
-nums = input()
+nums = input()   #
 nums = [int(n)  for n in nums]
 
 ordered_nums = sorted(nums, reverse=True)
