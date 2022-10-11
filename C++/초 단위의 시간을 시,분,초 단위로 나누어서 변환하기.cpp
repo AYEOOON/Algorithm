@@ -1,3 +1,5 @@
+# 초 단위의 시간을 시,분,초 단위로 나누어서 변환하기.cpp
+
 #include <iostream>
 using namespace std;
 
