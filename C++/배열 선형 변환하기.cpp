@@ -6,6 +6,7 @@ using namespace std;
 
 void rowTransform (const int originArray [][4], int rowSize, int rowArray[])
 {
+  // 변수 
   int i = 0;
   int j = 0;
   for (int k = 0; k < 8; k++)
