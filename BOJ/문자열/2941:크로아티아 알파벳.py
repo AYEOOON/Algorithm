@@ -12,3 +12,10 @@ for i in C:                    # C 리스트의 요소
   C = C.replace(i,'*')         # replace 함수로 수정된 문자를 입력받은 변수와 동일한 변수에 선언
   
 print(len(word))               # word 문자열에 있던 크로아티아 알파벳은 . 문자로 바뀌었으므로 변수 word의 길이를 세면 사용된 크로아티아 알파벳의 갯수를 알수있다.
+
+
+
+
+# 다른 사람 풀이
+
+c=input().count;print(c('')-1-sum(map(c,['-','=','nj','lj','dz='])))
