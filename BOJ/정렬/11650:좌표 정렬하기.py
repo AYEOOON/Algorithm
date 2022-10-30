@@ -21,3 +21,14 @@ nums.sort(key = lambda x : (x[0],x[1]))   # sort를 이용하여 이차원 리�
 # 출력
 for i in range(N):
   print(nums[i][0],nums[i][1])
+
+  
+# 다른사람 풀이
+
+import sys
+def convert(s):
+    x, y = s.split()
+    return int(x) + int(y)/1000000
+arr = sys.stdin.readlines()[1:]
+arr = sorted(arr, key=lambda x: convert(x))
+print(''.join(arr))
