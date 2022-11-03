@@ -13,3 +13,15 @@ for i in range(len(num_list)):      # 요소들을 하나씩 출력한다.
   print(num_list[i])
   
   
+# 다른 사람풀이
+
+import sys
+I = sys.stdin.readline
+P = sys.stdout.write
+
+T = int(I())
+A = []
+for _ in range(T):
+    A.append(int(I()))
+A.sort()
+P('\n'.join(map(str, A)))
