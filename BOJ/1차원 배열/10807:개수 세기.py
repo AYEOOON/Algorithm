@@ -12,3 +12,9 @@ N = int(input())
 numlist = list(map(int,input().split()))
 v = int(input())
 print(numlist.count(v))
+
+
+# 다른 사람 풀이
+
+input()
+print(input().split().count(input()))
