@@ -26,3 +26,7 @@ for i in range(9) :
 
 print(MAX)
 print(X, Y)
+
+
+# 다른사람 풀이
+
