@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-  const string str("This is a long string.");
+  string str("This is a long string.");
   
   int p = str.find("is");
 
