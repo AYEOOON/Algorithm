@@ -11,17 +11,19 @@ import sys
 input = sys.stdin.readline
 
 N = int(input())
-arr = [[0 for _ in range(101)]for _ in range(101)]
+arr = [[0 for _ in range(101)]for _ in range(101)]    # 100 * 100의 2차원 array를 만들었다. > array 내의 요소들은 각각 도화지를 1/100으로 나눈 한 칸을 의미한다.
 
-for _ in range(N):
+for _ in range(N):      # 각각의 색종이가 차지하는 부분의 요소값을 1로 바꿔준다.
   a,b = map(int,input().split())
 
   for i in range(a,a+10):
     for j in range(b,b+10):
       arr[i][j] = 1
 
-count = 0
+count = 0      # array에서 1의 개수를 카운팅해서 출력해주었다.
 for row in arr:
   count += row.count(1)
 
 print(count)
+
+
