@@ -25,3 +25,28 @@ def isPalindrome(s):
 for _ in range(int(input())):
     cnt = 0
     print(isPalindrome(input().rstrip()), cnt)
+
+    
+    
+    
+# 다른사람풀이
+
+import sys
+input = sys.stdin.readline
+
+def best():
+	n = int(input())
+	ans = []
+	for _ in range(n):
+		s = input().strip()
+		if s == s[::-1]:
+			ans.append(f'1 {len(s)//2 + 1}')
+			continue
+		for i in range((len(s)+1)//2):
+			if s[i] != s[-i-1]:
+				ans.append(f'0 {i+1}')
+				break
+	print('\n'.join(ans))
+
+if __name__ == "__main__":
+	best()
