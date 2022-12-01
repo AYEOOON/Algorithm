@@ -33,6 +33,35 @@ Product::~Product()
 {
 }
 
+
+
+
+// serch()
+string search;
+  int offset;
+  string line;
+  ifstream istr;
+  istr.open("Product_List");
+
+  cout << "찾으시는 제품의 이름을 입력하세요: " << endl;
+  cin >> search;
+
+  if (istr.is_open())
+  {
+    while(!istr.eof())
+    {
+      getline(istr,line); 
+      if((offset = line.find(search,0))!=string::npos)
+        cout << "해당 제품을 찾았습니다." << search << endl;
+    }
+    istr.close();
+  }
+  else
+  {
+    cout << "해당 제품을 찾지 못했습니다." << endl;
+
+    system("pause");
+    
 void Product::print() const
 {
   cout << "-----------------------" << endl;
