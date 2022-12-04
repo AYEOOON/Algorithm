@@ -6,9 +6,13 @@
 # 내 풀이
 arr = []
 
-for i in range(9):
+for i in range(9):   # 9개의 수를 for문으로 입력받음
   arr.append(int(input()))
-print(max(arr), arr.index(max(arr))+1)
+print(max(arr), arr.index(max(arr))+1)  # index 함수의 순서는 0번째부터 시작하기 떄문에 1을 더해주었다. 
+
+
+# 9개의 숫자를 입력받기 위한 리스트를 만들기 위해 리스트 컴프리헨션으로 작성할 수 있다. 
+a = [int(input()) for _ in range(9)]
 
 
 # 다른사람 풀이
