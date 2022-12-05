@@ -8,9 +8,9 @@
 n = int(input())                           # 과목수
 
 x = list(map(int,input().split()))         # 과목 수 만큼 과목의 점수를 입력
-max_score = max(x)
+max_score = max(x)                         # 점수리스트에서 최댓값찾기
 
-new_score = []
+new_score = []                             # 새로운 점수를 넣을 리스트
 for score in x:
   new_score.append(score/max_score*100)    # (입력받은 점수/최고 점수*100)식으로 새로운 점수를 구한 뒤 new_score[] 리스트에 저장한다.
 
