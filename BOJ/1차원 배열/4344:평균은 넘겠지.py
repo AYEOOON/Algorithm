@@ -17,3 +17,7 @@ for _ in range(n):
   rate = cnt/num[0]*100
   print(f'{rate:.3f}%')                  # f-string 표기법으로 문자열을 작성하면 { } 중괄호를 이용해서 변수를 삽입할 수 있다.
 
+  
+  
+# 위 코드에서 count변수를 0으로 초기화하고 for 구문을 다음과 같이 한 줄로 나타낼 수 있다.
+count = sum([1 for i in score[1:] if i > a])
