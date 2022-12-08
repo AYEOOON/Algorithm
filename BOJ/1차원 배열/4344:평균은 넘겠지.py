@@ -8,7 +8,7 @@ n = int(input())
 for _ in range(n):
   num = list(map(int,input().split()))
   avg = sum(num[1:])/num[0]              # 평균을 구함 (nums[0]: 학생수, nums[1:] 점수)
-  cnt = 0
+  cnt = 0                                # 점수가 평균을 넘는 학생 수를 구하기 위해 count변수를 0으로 초기화한다.
 
   for score in num[1:]:                  # for문으로 점수 각각을 score 변수에 선언
     if score > avg:
