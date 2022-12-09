@@ -14,3 +14,11 @@ for i in range(n-1,-1,-1):#뜻 잊지 말기
     print(a[i],end=' ')
 
 
+    
+# 다른사람의 풀이
+
+num = int(input())
+a = list(map(int, input().split())) #a에 정수형으로 입력값을 입력받음
+  
+for i in range(num-1, -1, -1):      #range(시작, 끝, 증감)을 활용하여 증감값을 -1로 설정함으로 역순으로 출력되도록 함
+  print(a[i], end=' ') 
