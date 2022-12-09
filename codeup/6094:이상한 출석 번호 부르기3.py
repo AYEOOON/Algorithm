@@ -18,3 +18,14 @@ numlist = map(int, input().split())
 a = min(numlist)
 print(a)
 
+
+
+# 다른사람의 풀이
+
+num = int(input())
+k = list(map(int, input().split()))
+a = k[0]              #a를 k[0]으로 초기화한다.
+for i in range(num): 
+  if(a>k[i]):         #최소값 변수 a보다 입력값이 담긴 k[i]가 작다면
+    a=k[i]            #최소값 변수 a에 이 입력값을 집어넣음
+print(a)
