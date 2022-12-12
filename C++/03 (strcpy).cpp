@@ -1,3 +1,4 @@
+#시험범위..
 #include <iostream>
 #include <string>
 using namespace std;
