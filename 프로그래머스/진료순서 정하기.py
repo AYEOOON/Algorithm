@@ -7,3 +7,10 @@
 def solution(emergency):
     e = sorted(emergency,reverse=True)
     return [e.index(i)+1 for i in emergency]
+
+
+
+# 다른사람 풀이
+
+def solution(emergency):
+    return [sorted(emergency, reverse=True).index(e) + 1 for e in emergency]
