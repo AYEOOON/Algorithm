@@ -16,4 +16,4 @@ def solution(my_string):
 # 풀이2
 
 def solution(my_string):
-    return sum(int(i) for i in my_string if i.isdigit())
+    return sum(int(i) for i in my_string if i.isdigit())  # 문자열.isdigit(): 문자열이 '숫자'로만 이루어져있는지 확인하는 함수 
