@@ -6,7 +6,7 @@
 
 def solution(n, t):
     for i in range(t):
-        n += n
+        n += n     #  n *= 2 이런 식으로 써도 됨
         
     return n
     
@@ -22,3 +22,4 @@ def solution(n, t):
 
 def solution(n, t):
     return n*(2**t)
+    
