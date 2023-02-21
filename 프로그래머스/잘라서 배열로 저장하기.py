@@ -4,8 +4,8 @@
 
 def solution(my_str, n):
     answer = []
-    for i in range(0, len(my_str), n):     # 0부터 len(my_str)까지 n만큼씩의 간격을 설정하는 것이 중요하다.
-        answer.append(my_str[i:i+n])
+    for i in range(0, len(my_str), n):   # 0부터 len(my_str)까지 n만큼씩의 간격을 설정하는 것이 중요
+        answer.append(my_str[i:i+n])     # i번째부터 i+n까지 슬라이싱
 
     return answer
   
