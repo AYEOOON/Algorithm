@@ -28,3 +28,14 @@ def solution(id_pw, db):
     if db_pw := dict(db).get(id_pw[0]):     # dict(db) 형변환: 리스트의 값들이 key/value 쌍을 맞출 수 있는 2개로 구성되어 있으면, dictionary 형태로 변경이 가능.
         return "login" if db_pw == id_pw[1] else "wrong pw"
     return "fail"
+    
+# 풀이3
+
+ef solution(id_pw, db):
+    dic = dict(db)
+    if dic.get(id_pw[0],-1) == id_pw[1]:
+        return "login"
+    elif dic.get(id_pw[0],-1) == -1:
+        return "fail"
+    else:
+        return "wrong pw"
