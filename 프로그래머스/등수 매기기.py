@@ -17,3 +17,22 @@ def solution(score):
 
     
     return answer
+    
+    
+    
+# 다른사람 풀이1
+
+def solution(score):
+    a = sorted([sum(i) for i in score], reverse = True)
+    return [a.index(sum(i))+1 for i in score]   # 중복된 값이 있을 때, python의 index 함수는 더 앞의 값을 리턴
+
+
+# 다른사람 풀이2
+
+def solution(score):
+    rank = sorted([sum(s) / 2 for s in score], reverse=True)
+    rankDict = {}
+    for i, r in enumerate(rank):      # for문에서 i는 rank의 인덱스, r은 값을 가리킴
+        if r not in rankDict.keys():  # 딕셔너리의 keys() 함수는 딕셔너리의 키 값들을 반환하는데 if r not in rankDict.keys()는 r값을 key로 하는 딕셔너리 값(value)이 있는지 확인하는 것
+            rankDict[r] = i + 1
+    return [rankDict[sum(s) / 2] for s in score]
