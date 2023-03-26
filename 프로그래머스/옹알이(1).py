@@ -37,3 +37,9 @@ def solution(babbling):
         else :
             answer += 1
     return answer
+    
+    
+ # 풀이3 ( lamda 사용)
+ 
+ def solution(babbling):
+    return len(list(filter(lambda x: x.replace("aya", "").replace("ye", "").replace("woo", "").replace("ma", "") == "" and "ayaaya" not in x and "yeye" not in x and "woowoo" not in x and "mama" not in x, babbling)))
