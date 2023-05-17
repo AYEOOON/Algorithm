@@ -2,34 +2,27 @@
 
 
 # 코드
+import sys
+input = sys.stdin.readline
 
-n = int(input())
-stack = []  # 오름차순으로 넣은 스택
-result = []  # push,pop 여부에 따른 연산 여부를 +,-로 저장
-count = 1
-temp = True
+count = 1                               # 1부터 n까지의 자연수를 나타내는 count 변수를 1로 초기화
+stack, result = [], []                  # 스택이 저장될 리스트 stack 생성과 push, pop을 나타내는 '+', '-'를 저장할 result 리스트 생성
 
-for i in range(n):
-  num = int(input())
-  
-  # num이하 숫자까지 스택에 넣기
-  while(count <= num):
-    stack.append(count)
-    result.append("+")
-    count += 1
+for _ in range(int(input())):
+  number = int(input())
 
-  #num이랑 스택 맨 위 숫자가 동일하다면 제거
-  if stack[-1] == num:
-    stack.pop()
-    result.append("-")
-  
-  #스택스열을 만들 수 없으므로 NO
-  else:
-    temp = False
-    print("NO")
-    break
+  while count <= number:                # count가 수열을 입력받은 number보다 작거나 같을 때까지 while문 반복
+    stack.append(count)                 # count 변수에 저장된 수를 stack 리스트에 넣고
+    result.append('+')                  # result 리스트에는 push라는 의미로 '+'를 저장
+    count += 1                          
 
-# 스택 수열을 만들 수 있는지 여부에 따라 출력
-if temp == True:
+  if stack[-1] == number:               # 스택에 제일 위에 위치한 수가 number와 같다면
+    stack.pop()                         # stack 리스트에서 pop
+    result.append('-')                  # result 리스트에는 pop이라는 의미로 '-'를 저장
+
+if stack:                               # 만약 임의의 수열과 같은 수열을 만들었다면 stack 리스트에는 아무것도 남아있지 않아야하지만 stack이 비어있지 않다면
+  print('NO')                           # 'NO'를 출력
+
+else:
   for i in result:
     print(i)
