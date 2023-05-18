@@ -28,3 +28,39 @@ if stack:                               # 만약 임의의 수열과 같은 수�
 else:
   for i in result:
     print(i)
+    
+    
+    
+    
+  # 내 풀이
+  
+import sys
+input = sys.stdin.readline
+
+count = 1
+stack, result = [], []
+n = int(input())
+
+for i in range(n):
+  num = int(input())
+
+  while(count <= num):
+    stack.append(count)
+    result.append("+")
+    count += 1
+  
+  
+  
+  if(stack[-1] > num):
+    print("NO")
+    sys.exit()
+
+      
+  stack.pop()
+  result.append("-")
+
+  
+
+for i in result:
+  print(i)
+
