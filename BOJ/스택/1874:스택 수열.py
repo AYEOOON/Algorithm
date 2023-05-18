@@ -49,17 +49,12 @@ for i in range(n):
     result.append("+")
     count += 1
   
-  
-  
   if(stack[-1] > num):
     print("NO")
     sys.exit()
 
-      
   stack.pop()
   result.append("-")
-
-  
 
 for i in result:
   print(i)
