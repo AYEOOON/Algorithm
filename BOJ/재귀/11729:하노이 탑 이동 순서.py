@@ -3,8 +3,9 @@
 # www.youtube.com/watch?v=FYCGV6F1NuY
 
 # 내 풀이
+from sys import stdout, stdin
+n = int(stdin.readline())
 
-n = int(input())
 def hanoi(n, a, b, c):    # a는 현재 n개의 원판이 쌓여있는 곳, b는 n-1개의 원판을 옮겨 놓을 곳, c는 a에서 남은 원판을 놓을 곳이다.
     if n == 1:
         print(a, c)
