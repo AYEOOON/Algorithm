@@ -9,9 +9,9 @@ def hanoi(n, a, b, c):    # a는 현재 n개의 원판이 쌓여있는 곳, b는
     if n == 1:
         print(a, c)
     else:
-        hanoi(n - 1, a, c, b)
-        print(a, c)
-        hanoi(n - 1, b, a, c)
+        hanoi(n - 1, a, c, b)   # n-1개의 원판을 1번 막대에서 2번 막대로 옮김
+        print(a, c)    # 남은 1개의 원판을 1번 막대에서 3번 막대로 옮김
+        hanoi(n - 1, b, a, c)  #  다시 n-1개의 원판을 2번 막대에서 3번 막대로 옮김
 sum = 1
 for i in range(n - 1):
     sum = sum * 2 + 1
