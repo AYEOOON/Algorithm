@@ -12,9 +12,16 @@ def solution(s):
             return False
         elif "P" not in s and "Y" not in s:
             return True
+
+# 이 풀이도 가능하다!
+def solution(s):
+    s = s.upper()
+    if s.count("P") == s.count("Y"):
+        return True
+    elif s.count("P") != s.count("Y"):
+        return False
         
     
-
 # 다른사람 풀이
 def numPY(s):
     return s.lower().count('p') == s.lower().count('y')  # True/False 판별
