@@ -15,6 +15,16 @@ n, k = map(int,input().split())
 print(factorial(n)//(factorial(k) * factorial(n-k)))
 
 
+# 개선한 내풀이
+def fac(n):
+  if n==0:
+    return 1
+  else:
+    return n*fac(n-1)
+n , k = map(int, input().split())
+print(int(fac(n)/(fac(k)*fac(n-k))))
+
+
 # 다른사람 풀이
 n, k = map(int, input().split())
 
