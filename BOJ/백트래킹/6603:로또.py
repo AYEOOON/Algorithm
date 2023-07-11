@@ -28,4 +28,26 @@ while(True):
   print()
 
 
-# 다른 풀이(재귀사용)
+# 다른 내 풀이(재귀사용)  - 문제 N과 M(6)과 비슷함
+import sys
+input = sys.stdin.readline
+
+def lotto(arr,start):
+  if(len(arr) == 6):
+      print(' '.join(map(str,arr)))
+      return 
+
+  for i in range(start, num[0]+1):
+    if num[i] not in arr:
+      arr.append(num[i])
+      lotto(arr,i)
+      arr.pop()
+
+while(True):
+  num = list(map(int, input().split()))
+  
+  if num[0] == 0:
+    break
+  lotto([],1)
+  print()
+
