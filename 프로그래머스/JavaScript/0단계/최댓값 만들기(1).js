@@ -14,3 +14,10 @@ function solution(numbers) {
     numbers.sort((a,b)=>b-a);   // 내림차순
     return numbers[0]*numbers[1];  // 첫번째꺼와 두번째 수 곱
 }
+
+
+// 다른사람 풀이
+function solution(numbers) {
+    numbers = numbers.sort((a, b) => a - b);
+    return numbers.at(-1) * numbers.at(-2);  // -1을 인덱스 마지막으로 표현하는 방법
+}
