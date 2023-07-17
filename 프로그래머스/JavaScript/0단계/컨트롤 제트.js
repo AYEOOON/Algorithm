@@ -19,6 +19,18 @@ function solution(s) {
     }
 }
 
+// 개선한 내 풀이
+function solution(s) {
+    let answer = [];
+    let arr = s.split(' ')
+    for(let a of arr){
+        if (a === "Z") answer.pop();
+        else answer.push(Number(a))
+    }
+    return answer.length ? answer.reduce((sum,curr) => sum+curr) : 0;
+}
+
+
 
 // 다른사람 풀이1
 function solution(s) {
