@@ -20,6 +20,19 @@ def solution(num, total):
         
     return sorted(answer)
 
+# 개선한 풀이(내가 한건아니고)
+def solution(num, total):
+    answer = []
+    middle = total//num
+    
+    if num%2 == 1:
+        for i in range(middle-num//2, middle+num//2+1):
+            answer.append(i)
+    else:
+        for i in range(middle-num//2+1, middle+num//2+1):
+            answer.append(i)
+            
+    return answer
 
 
 # 다른사람 풀이1
