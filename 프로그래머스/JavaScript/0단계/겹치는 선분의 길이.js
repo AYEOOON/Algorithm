@@ -4,14 +4,14 @@
 
 // 내 풀이
 function solution(lines) {
-    const start = Math.min(...lines.flat());
-    const end = Math.max(...lines.flat());
-    const arr = new Array(end-start).fill(0)
+    const start = Math.min(...lines.flat());  //  최초로 그려지는 선분의 시작점
+    const end = Math.max(...lines.flat());   // 마지막에그려지는 선분의 종단점
+    const arr = new Array(end-start).fill(0)  // 그 차이만큼 0으로 채워진 리스트생성
     lines.forEach((el)=>{
         for(let i = el[0]; i < el[1]; i++)
-            arr[i-start] += 1
+            arr[i-start] += 1  // 각 선분들의 길이를 idx에 대입하여 1씩 더해준다.
     })
-    return arr.filter(el => el>=2 || el>=3).length
+    return arr.filter(el => el>=2).length  // 리스트에 2이상인 부분을 필터링
 }
 
 
