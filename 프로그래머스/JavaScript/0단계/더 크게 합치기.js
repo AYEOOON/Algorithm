@@ -13,5 +13,5 @@ function solution(a, b) {
 
 // 다른사람 풀이
 function solution(a, b) {
-    return Math.max(Number(`${a}${b}`), Number(`${b}${a}`))  // $:백틱 => $식별자를 이용해서 변수명을 그대로 반환
+    return Math.max(Number(`${a}${b}`), Number(`${b}${a}`))  // `:백틱 => $식별자를 이용해서 변수명을 그대로 반환
 }
