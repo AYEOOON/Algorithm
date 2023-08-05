@@ -29,3 +29,18 @@ def solution(n, lost, reserve):
             lost.remove(j+1)
             
     return n-len(lost)
+
+
+# 다른사람 풀이
+def solution(n, lost, reserve):
+    
+    a= set(lost)-set(reserve)    
+    b= set(reserve)-set(lost)   #lost와 reserve 중복제거
+    for i in b:     #체육복을 빌려줄 수 있을 때
+        if i-1 in a:    #그 전 번호부터 확인해 봐야한다. 빌려줄 수 있을 때.
+            a.remove(i-1)
+        elif i+1 in a:  #그 다음 번호한테 빌려줄 수 있을 때
+            a.remove(i+1)
+            
+                
+    return n-len(a)
