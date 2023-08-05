@@ -28,7 +28,7 @@ l[1]=0
 for i in range(2, int(n**(0.5))+1):  # 범위를 제곱근으로 줄이면 속도가 빨라진다. 
     if l[i]:
         for j in range(i*i, n+1,i):
-            l[j]=0
+            l[j]=0  # 소수가 아니면 0
 
 l=[i for i in range(m,n+1) if l[i] == 1]
 if sum(l)==0:
