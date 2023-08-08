@@ -6,7 +6,7 @@
 function solution(l, r) {
     let answer = []
     for(let i = l; i <= r; i++){
-        if (/^[05]+$/.test(i)){
+        if (/^[05]+$/.test(i)){  // 문자열의 전체가 "0"또는 "5"로 이루어진 경우 (문자열의 길이1이어도 되고 더 길어도 됨)
             answer.push(i)
         }
     }
