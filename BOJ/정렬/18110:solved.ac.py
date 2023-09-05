@@ -36,20 +36,22 @@ else:
 
 
 # 다른사람의 풀이
+# 파이썬에서 반올림 함수인 round()는 오사오입이다. 
+# 즉, 5 초과일 때 올림한다는 것! 문제 조건에 맞추기 위해 round() 함수 안에 0.0000001를 더해주었다.
 import sys
-def main():
-    n, *m = map(int, sys.stdin.read().split())
-    if n == 0:
-        print(0)
-        return
-    m.sort()
-
-    cut = (n*15+50)//100
-    s, d = sum(m[cut:n-cut]), (n - cut - cut)
-    ans, mod = s // d, s % d
-
-    if mod * 2 >= d:
-        ans += 1
+input = sys.stdin.readline
+n = int(input())
+if(n!=0):
+    arr = []
+    for _ in range(n):
+        arr.append(int(input()))
+    arr.sort()
+    x = round(n*0.15+0.0000001);
+    s = sum(arr[x:n-x])
+    ans = round((s/(n-2*x))+0.0000001)
+    print(ans)
+else:
+    print(0)
 
     print(ans)
 
