@@ -8,8 +8,8 @@
 # 리스트를 써서 시간 초과가 발생하면 set을 이용하면 된다!
 
 # 내 풀이
-import sys
-input = sys.stdin.readline
+# import sys
+# input = sys.stdin.readline  # 이게 자꾸 리스트에 '\n'을 집어넣었다.
 
 N,M = map(int,input().split())
 
@@ -28,3 +28,15 @@ two_no = no_hear_person & no_see_person
 two_no = sorted(two_no)
 
 print(len(two_no),*two_no,sep='\n')
+
+# 다른사람 풀이
+import sys
+n, m = map(int, input().split())
+nameList = sys.stdin.read().splitlines()
+hearset = set(nameList[:n])
+seeset = set(nameList[n:])
+ret = list(hearset & seeset)
+ret.sort()
+print(len(ret))
+for i in ret:
+    print(i)
