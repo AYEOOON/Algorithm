@@ -13,6 +13,13 @@ N×M크기의 배열로 표현되는 미로가 있다.
 BFS를 사용하는 문제
 """
 
+"""
+1. graph[0][0]부터 (실제 위치는 (1, 1)) bfs를 이용해 동, 서, 남, 북을 검사하여 이동했을 때 1인 값을 찾는다. 
+-> 값이 1 이어야 이동할 수 있기 때문에
+2. 만약 1이라면 그 전 값에 +1을 하여 이동할 때 지나야 하는 최소 칸 수를 더해준다.
+3. 이렇게 쭉 검사 하다보면 마지막 graph[n-1][m-1]에는 최소 칸 수의 최종값이 들어가게 된다.
+"""
+
 # 내 풀이
 import sys
 input = sys.stdin.readline
@@ -24,7 +31,8 @@ dy = [0, 1, 0, -1]
 
 graph = []
 for _ in range(N):
-  line = list(map(int,input().rstrip()))
+  # readline의 경우 맨 뒤에 '\n'까지 입력받으므로 제거해줘야 함
+  line = list(map(int,input().rstrip()))   # split()을 사용하면 [011..]이렇게 입력받아서 틀렸는데, rstrip()을 사용하여 해결하였다. 
   graph.append(line)
 
 def BFS(a,b):
