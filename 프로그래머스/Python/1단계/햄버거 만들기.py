@@ -10,9 +10,11 @@
 """
 배열을 원소를 하나씩 받아와서 마지막 4개의 원소가 1231인지 확인
 확인이 되면 마지막 4개의 원소 삭제 후, 햄버거 만든 개수 1 추가
+
+** 시간 초과가 나지 않도록 하는 것이 중요한 문제**
 """
 
-# 내 풀이
+# 내 풀이(다른사람 풀이 참고)
 def solution(ingredient):
     hamberger = 0
     temp = []
@@ -31,6 +33,25 @@ def solution(ingredient):
             
         if i+1 == b:
             a = 1
+            
+    return hamberger
+
+
+# 개선한 나의 풀이
+def solution(ingredient):
+    hamberger = 0
+    temp = []
+    idx = 0
+
+    for i in ingredient:
+        temp.append(i)
+        if temp[-4:] == [1,2,3,1]:
+            hamberger += 1
+            temp.pop()
+            temp.pop()
+            temp.pop()
+            temp.pop()
+            
             
     return hamberger
 
