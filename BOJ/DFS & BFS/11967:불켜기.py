@@ -63,3 +63,30 @@ def bfs(x,y,switchs):
 
 bfs(1,1, switchs)
 print(sum(map(sum, room)))
+
+
+# 다른사람 풀이
+import sys
+input = sys.stdin.readline
+
+N, M = map(int,input().split()) ; Dic = [[[] for _ in range(N)] for _ in range(N)]
+Dir = [(1, 0), (0, 1), (-1, 0), (0, -1)] ; V = [[0] * N for _ in range(N)]
+
+D = [(0, 0)] ; V[0][0] = 3 ; cnt = 1
+for _ in range(M) :
+    a, b, c, d = map(int ,input().split()) ; Dic[a-1][b-1].append((c-1, d-1))
+
+while D :
+    x, y = D.pop()
+
+    for a, b in Dir :
+        nx = x+a ; ny = y+b
+        if 0<=nx<N and 0<=ny<N :
+            if V[nx][ny] == 0 : V[nx][ny] = 2
+            elif V[nx][ny] == 1 : V[nx][ny] = 3 ; D.append((nx, ny))
+
+    for a, b in Dic[x][y] :
+        if V[a][b] == 0 : V[a][b] = 1 ; cnt += 1
+        elif V[a][b] == 2 : V[a][b] = 3 ; D.append((a, b)) ; cnt += 1
+
+print(cnt)
