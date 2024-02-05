@@ -23,7 +23,7 @@ arr = []  # 암호가 들어갈 배열
 words.sort()  # 알파벳순으로 정렬
 
 
-def func(start):  # 오름차순으로 정렬하기 위해 start매개변수 추가
+def func(start): 
   # 종료조건
   if(len(arr) == L):  # 암호가 들어간 배열의 길이가 L일때
     a,b = 0,0  # 자음과 모음 수 초기화
