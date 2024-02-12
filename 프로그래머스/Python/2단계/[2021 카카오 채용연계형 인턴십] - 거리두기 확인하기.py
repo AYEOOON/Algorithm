@@ -39,8 +39,8 @@ def solution(places):
                         if 0<=nx<5 and 0<=ny<5:
                             if places[i][nx][ny] == 'P':
                                 cnt += 1
-                            if cnt >= 2:
-                                answer[i] = 0
+                        if cnt >= 2:
+                            answer[i] = 0
       return answer
 
     # for i in range(5):
