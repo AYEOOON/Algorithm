@@ -9,9 +9,9 @@
 # 내 풀이
 def solution(s):
     answer = 1
-    for i in range(len(s)):
-        for j in range(len(s), i, -1):
-            word = s[i:j]
+    for i in range(len(s)):  # 시작부분 조절
+        for j in range(len(s), i, -1):  # 끝부분 조절
+            word = s[i:j]  # 부분문자열
             if word == word[::-1]:
                 answer = max(answer, j-i)
     return answer
