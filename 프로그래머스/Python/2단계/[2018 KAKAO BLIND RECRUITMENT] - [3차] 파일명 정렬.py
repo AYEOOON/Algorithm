@@ -17,9 +17,9 @@
 # 내 풀이
 def solution(files):
     arr = []
-    HEAD, NUM, TAIL = '', '', ''
     
     for file in files:
+        HEAD, NUM, TAIL = '', '', ''
         for i in range(len(file)):
             if file[i].isdigit():
                 HEAD = file[:i]
@@ -31,9 +31,8 @@ def solution(files):
                         NUM = NUM[:j]
                         break
                     
-                arr.append([HEAD, NUM, TAIL])
-                HEAD, NUM, TAIL = '', '', ''  # 첫번째 for문 사이에 초기화 부분을 넣으면 왜 안될까.
-                break
+                arr.append([HEAD, NUM, TAIL])  # 들여쓰기 부분 중요
+                break  # 중요 
                     
 
     arr = sorted(arr, key = lambda x : (x[0].lower(), int(x[1])))
