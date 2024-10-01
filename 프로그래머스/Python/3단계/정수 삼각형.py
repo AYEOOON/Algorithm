@@ -21,10 +21,10 @@ def solution(triangle):
 
     for i in range(1, len(triangle)):
         for j in range(len(triangle[i])):
-            if arr[i-1][j] == 0:
-                arr[i][j] = arr[i-1][j-1] + triangle[i][j]
+            # if arr[i-1][j] == 0:                                     이 부분이 없어도 잘 만돌아감!!
+            #     arr[i][j] = arr[i-1][j-1] + triangle[i][j]
 
-            else: 
+            # else: 
                 arr[i][j] = max(arr[i-1][j-1] + triangle[i][j], arr[i-1][j]+triangle[i][j])
 
     return max(arr[-1])
