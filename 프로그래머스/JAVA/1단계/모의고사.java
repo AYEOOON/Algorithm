@@ -10,21 +10,13 @@ class Solution {
         int[] third = {3, 3, 1, 1, 2, 2, 4, 4, 5, 5};
         
         for(int i = 0; i<answers.length; i++){
-            if(answers[i] == first[i%first.length]){
-                answer[0]++;
-            }
-            if(answers[i] == second[i%second.length]){
-                answer[1]++;
-            }
-            if(answers[i] == third[i%third.length]){
-                answer[2]++;
-            }
+            if(answers[i] == first[i%first.length]) answer[0]++;
+            if(answers[i] == second[i%second.length]) answer[1]++;
+            if(answers[i] == third[i%third.length]) answer[2]++;
         }
         int max = Arrays.stream(answer).max().getAsInt();
         for(int j = 0; j < 3; j++){
-            if(answer[j] == max){
-                result[j] = j+1;
-            }
+            if(answer[j] == max) result[j] = j+1;
         }
         return Arrays.stream(result).filter(n->n!=0).toArray();
     }
