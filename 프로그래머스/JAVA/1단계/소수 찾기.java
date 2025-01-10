@@ -9,6 +9,7 @@
   - prefix가 비어 있지 않으면, 숫자로 변환하여 소수 여부를 확인합니다.
   - prefix와 str을 활용해 재귀적으로 모든 가능한 조합을 생성합니다.
   - 발견된 소수는 uniqueNumbers에 저장됩니다. => 동일한 값을 넣지 않기 위해 Set 자료구조를 이용합니다.
+  
 <solution 메소드>
   - maxNum은 입력된 숫자 문자열의 길이에 따라 가장 큰 숫자를 계산합니다 (10^length).
   - initPrimeArray를 통해 maxNum까지의 소수 여부를 미리 계산합니다.
