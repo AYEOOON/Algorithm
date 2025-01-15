@@ -2,7 +2,6 @@ import java.util.*;
 
 class Solution {
     public int solution(int[][] maps) {
-        int answer = 0;
         int n = maps.length;
         int m = maps[0].length;
         int[] dx = {0, 0, -1, 1};
@@ -10,7 +9,7 @@ class Solution {
         
         Queue<int[]> Q = new LinkedList<>();
         Q.offer(new int[]{0,0,1});
-        
+
         while(!Q.isEmpty()){
             int[] tmp = Q.poll();
             int x = tmp[0];
