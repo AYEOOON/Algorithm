@@ -25,8 +25,6 @@ class Solution {
                 if(cnt < 2){
                     answer.add(songEntry.getKey());
                     cnt++;
-                }else{
-                    break;
                 }
             }
         }
