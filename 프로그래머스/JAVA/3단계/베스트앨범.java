@@ -1,5 +1,4 @@
 import java.util.*;
-
 class Solution {
     public ArrayList<Integer> solution(String[] genres, int[] plays) {
         ArrayList<Integer> answer = new ArrayList<>();
