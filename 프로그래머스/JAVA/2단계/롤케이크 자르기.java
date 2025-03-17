@@ -11,7 +11,8 @@
 
 3. 매 순간 형과 동생의 토핑 종류 개수를 비교
   - hyungSet.size() == dongsangMap.size()이면 경우의 수 증가
-  
+
+중요: 각자가 가진 토핑의 갯수가 아닌 가짓 수에 집중!
 */
 
 import java.util.*;
