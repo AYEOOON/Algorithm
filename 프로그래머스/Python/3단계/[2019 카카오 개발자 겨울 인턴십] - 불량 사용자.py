@@ -3,7 +3,7 @@
 1. banned_id의 *을 .으로 변환하여 정규표현식 패턴으로 변환
 2. matches 리스트를 만들어 각 banned_id와 매칭되는 user_id 목록을 저장
 3. itertools.permutations을 사용하여 banned_id 개수만큼의 user_id 순열을 생성
-4. 각 banned_id에 대해 하나씩 매칭되는지 검사 (all(perm[i] in matches[i]))
+4. 각 banned_id에 대해 하나씩 매칭되는지 검사
 5. 중복된 조합을 방지하기 위해 set에 저장
 6. 최종적으로 가능한 조합의 개수를 반환
 
