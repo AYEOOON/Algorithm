@@ -14,8 +14,8 @@ XYZ 마트에서 할인하는 제품을 나타내는 문자열 배열 discount�
 def solution(want, number, discount):
     memo = dict(zip(want, number))
     result = 0
-    
     start = 0
+    
     while(start <= len(discount)-10):
         good = 0
         for p in want:
